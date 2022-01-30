@@ -1,41 +1,134 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
+        <meta http-equiv= "Content-Type" content="text/html; charset= utf-8">
+		<meta http-equiv="Pragma" content="no-cache">
+		<link rel="stylesheet" href="/global-sub.css" type="text/css" media = "screen">
+		<link rel = "stylesheet" href="/global-form.css" type = "text/css" media = "screen">
+		<link rel ="stylesheet" href = "/print.css" type = "text/css" media = "print">
+		<script language="JavaScript" type = "text/JavaScript"> function zappo(form>
+		{ form.submit(); } </script>
         <meta name="viewport" content="width=device, initial-scale=1">
-        <title>Classification - Voter Registration Application</title>
     </head>
-    <body>
-        <h1>Classification - Voter Registration Application</h1>
-        <h4>All fields marked with an asterisk(*) are required </h4>
-        <h2>Classification</h2>
-        <h3>I am one of the following*</h3>
+        <form action="/index.asp" method = "post">
+		<fieldset>
+			<legend> Are you a United States Citizen? </legend>
+			<input id = "radiobutton_1" type = "radio" name = "citizen" value = "Yes">
+			<label class = "radioitem" for = "radiobutton_1">Yes</label>
+			<input id = "radiobutton_2" type = "radio" name= "citizen" value = "No">
+			<label class = "radioitem" for = "radiobutton_2">No</label>
+			<br>
+		</fieldset>
+		<fieldset>
+			<legend> Will you be 18 years of age on or before election day? </legend>
+			<input id = "radiobutton_1b" type = "radio" name = "age" value = "Yes">
+			<label class = "radioitem" for = "radiobutton_1b">Yes</label>
+			<input id = "radiobutton_2b" type = "radio" name= "age" value = "No">
+			<label class = "radioitem" for = "radiobutton_2b">No</label>
+			<br>
+		</fieldset>
+		<fieldset>
+			<legend>Application Type:</legend>
+			<input id="radiobutton_3" type="radio" name="apptype" value="New">
+			<label class="radioitem" for="radiobutton_3">New Application</label>
+			<input id="radiobutton_4" type="radio" name="apptype" value="Change">
+			<label class="radioitem" for="radiobutton_4">Change address within county</label>
+			<input id="radiobutton_5" type="radio" name="apptype" value="Replacement">
+			<label class="radioitem" for="radiobutton_5">Replacement Voter ID</label>
+		</fieldset>
+		<fieldset>
+			<legend>Are you interested in serving as an election worker?</legend>
+			<input id="radiobutton_6" type = "radio" name="serving" value = "Yes">
+			<label class="radioitem" for= "radiobutton_6">Yes</label>
+			<input id="radiobutton_7" type = "radio" name="serving" value = "No">
+			<label class="radioitem" for= "radiobutton_7">No</label>
+		</fieldset>
+		<fieldset>
+			<legend>Applicant Information</legend>
+			<table summary width="100%">
+				<tbody>
+					<tr>
+						<td>
+							<label class = "fname" for ="fname">First Name:</label>
+							<br>
+							<input type="text" name="fname" id="fname" value="" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoA
+							AAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaT
+							Vv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jy
+							EBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+a
+							j6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg==&quot;); 
+							background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;">
+						</td>
+						<td>
+							<label class="mname" for ="mname">Middle Name (if any):</label>
+							<br>
+							<input type="text" name="mname" id="mname" value>
+						</td>
+						<td>
+							<label class="lname" for="lname">
+								<span>Last Name (Include suffix if any (Jr, Sr, III)):</span>
+							</label>
+							<br>
+							<input type="text" name="lname" id="lname" value>
+						</td>
+						<td>
+							<label class="frmrname" for="frmrname">Former Name: (if any) </label>
+							<br>
+							<input type="text" name="frmrname" id="frmrname" value>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="dobmon">Date of Birth: (mm/dd/yyyy)</label>
+							<br>
+							<span class="dobmon">
+								<input style="float: left; margin-right: 5px;" title="Month" 
+								type="text" name="dobmon" id="dobmon" maxlength="2" size="2" 
+								value="">
+								<input style="float: left; margin-right: 5px;" aria-label="Day" 
+								type="text" name="dobday" id="dobday" maxlength="2" size="2" 
+								value="">
+								<input style="float: left; margin-right: 5px;" aria-label="Year" 
+								type="text" name="dobyear" id="year" maxlength="4" size="4" 
+								value="">
+							</span>
+						</td>
+						<td>
+							<label for="gender">Gender (optional)</label>
+							<br>
+							<span class= "gender">
+								<select id="gender" name="gender" size="1">
+									<option selected="selected">Select...</option>
+									<option value="Male">Male</option>
+									<option value="Female>Female</option>
+								</select>
+							</span>
+						</td>
+						<td colspan="2">
+							<label for="telnumac">Telephone Number, Include Area Code: (Optional)
+							</label>
+							<br>
+							<span class="telnum">
+								<input style="float: left; margin-right: 5px;" title="Area Code" type="text" 
+								name="telnumac" id="telnumac" maxlength="3" size="3" value="">
+								<input style="float: left; margin-right: 5px;" type="text" 
+								name="telnumpre" aria-label="First three digits" maxlength="3" size="3" value="">
+								<input style="float: left; margin-right: 5px;" type="text" 
+								name="telnum" aria-label="Last four digits" maxlength="4" size="4" value="">
+							</span>
+						</td>
+					</tr>
+					<tr>
+					</tr>
+					<tr bgcolor = "#F5F5F5">
+					</tr>
+				</tbody>
+			</table>
+		</fieldset>
+		</form>
 
-        <ul>
+        <h3>Identification*</h3>
+        <h4>New voters may have to show a form of identification or proof of residency the first time they vote, if a driver license or SSN was not provided when registering.</h4>
 
-        <li><strong>(A)</strong> A U.S. citizen and resident of California </li>
-        <li><strong>(B)</strong> A U.S. citizen and a member of the Uniformed Services or Merchant Marine on active duty outside my county.</li>
-        <li><strong>(C)</strong> A U.S. citizen and an eligible spouse or dependent of a member of the Uniformed Services or Merchant Marine on active duty outside my county.</li>
-        <li><strong>(D)</strong> A U.S. citizen and an activated National Guard member on State orders outside my county.</li>
-        <li><strong>(E)</strong> A U.S. citizen residing outside the U.S. temporarily.</li>
-        <li><strong>(F)</strong> A U.S. citizen residing outside the U.S. indefinitely.</li>
-        <li><strong>(G)</strong> A U.S. citizen and have never resided in the U.S.</li>
-
-        <select name="option" id= "option">
-            <option value= "">--Please choose an option--</option>
-            <option value= "A">A</option>
-            <option value= "B">B</option>
-            <option value= "C">C</option>
-            <option value= "D">D</option>
-            <option value= "E">E</option>
-            <option value= "F">F</option>
-            <option value= "G">G</option>
-        </select>
-
-        </ul>
-
-        <br>
-        <button><a href= "https://www.google.com"> NEXT</a></button>
 
     </body>
 </html>
