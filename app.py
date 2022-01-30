@@ -18,7 +18,7 @@ class Registry(db.Model):
     formerName = db.Column(db.String(120), unique=True, nullable=True) #optional
     DOB = db.Column(db.String(120), unique=True, nullable=False) ## mm/dd/yyyy
     gender = db.Column(db.String(120), unique=True, nullable=True) ## male/female
-    phonenumber = db.Column(db.String(10), unique=True, nullable=) ## areacode:3, middle:3, last: 4 try to split
+    phonenumber = db.Column(db.String(10), unique=True, nullable=True) ## areacode:3, middle:3, last: 4 try to split
     dln = db.Column(db.String(8), unique=True, nullable=False) ## drivers license num
     ssn4 = db.Column(db.String(4), unique=True, nullable=False) ## or last 4 of ssn
     resAddress = db.Column(db.String(120), unique=True, nullable=False) ##
