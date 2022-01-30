@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
+        <meta http-equiv= "Content-Type" content="text/html; charset= utf-8">
+		<meta http-equiv="Pragma" content="no-cache">
+		<link rel="stylesheet" href="/global-sub.css" type="text/css" media = "screen">
+		<link rel = "stylesheet" href="/global-form.css" type = "text/css" media = "screen">
+		<link rel ="stylesheet" href = "/print.css" type = "text/css" media = "print">
+		<script language="JavaScript" type = "text/JavaScript"> function zappo(form>
+		{ form.submit(); } </script>
         <meta name="viewport" content="width=device, initial-scale=1">
         <title>Personal Information - Voter Registration Application</title>
     </head>
@@ -13,92 +19,42 @@
 			<input id = "radiobutton_1" type = "radio" name = "citizen" value = "Yes"
 			checked onclick = "if (!window.__cfRLUnblockHandlers) return false; zappo(this.form)">
 			<label class = "radioitem" for = "radiobutton_1">Yes</label>
-			<input id = radiobutton_2" type = "radio" name= "citizen" value = "No"
+			<input id = "radiobutton_2" type = "radio" name= "citizen" value = "No"
 			onclick = "if (!window.__cfRLUnblockHandlers) return false; zappo(this.form)">
 			<label class = "radioitem" for = "radiobutton_2">No</label>
 			<br>
+		</fieldset>
+		<fieldset>
+			<legend> Will you be 18 years of age on or before election day? </legend>
+			<input id = "radiobutton_1b" type = "radio" name = "age" value = "Yes"
+			checked onclick = "if (!window.__cfRLUnblockHandlers) return false; zappo(this.form)">
+			<label class = "radioitem" for = "radiobutton_1b">Yes</label>
+			<input id = "radiobutton_2b" type = "radio" name= "citizen" value = "No"
+			onclick = "if (!window.__cfRLUnblockHandlers) return false; zappo(this.form)">
+			<label class = "radioitem" for = "radiobutton_2b">No</label>
+			<br>
+		</fieldset>
+		<fieldset>
+			<legend>Application Type:</legend>
+			<input id="radiobutton_3" type="radio" name="apptype" value="New">
+			<label class="radioitem" for="radiobutton_3">New Application</label>
+			<input id="radiobutton_4" type="radio" name="apptype" value="Change">
+			<label class="radioitem" for="radiobutton_4">Change address within county</label>
+			<input id="radiobutton_5" type="radio" name="apptype" value="Replacement">
+			<label class="radioitem" for="radiobutton_5">Replacement Voter ID</label>
+		</fieldset>
+		<fieldset>
+			<legend>Are you interested in serving as an election worker?</legend>
+			<input id="radiobutton_6" type = "radio" name="serving" value = "Yes">
+			<label class="radioitem" for= "radiobutton_6">Yes</label>
+			<input id="radiobutton_7" type = "radio" name="serving" value = "No">
+			<label class="radioitem" for= "radiobutton_7">No</label>
 		</fieldset>
 		
 		
 		
 		
-		<h4>All fields marked with an asterisk(*) are required </h4>
-        <h3>Personal Information</h3>
-        <h3>Legal Name</h3>
-
-        <form>
-            <label for="Prefix">Prefix</label>
-
-            <select name="Prefix" id="prefix">
-              <option value="MR.">MR</option>
-              <option value="MRS.">MRS</option>
-              <option value="MISS">MISS</option>
-              <option value="MS.">MS</option>
-            </select>
-
-        </form>
-        <br>
-
-        <form>First Name <input type = "text"> </form>
-        <br>
-
-        <form>Middle Name <input type = "text"> </form>
-        
-        <br>
-
-        <form>Last Name <input type = "text"></form>
-        
-        <br>
-
-        <form>
-            <label for="Suffix">Suffix</label>
-
-            <select name="Suffix" id="suffix">
-              <option value="JR.">JR</option>
-              <option value="SR.">SR</option>
-              <option value="II">II</option>
-              <option value="III">III</option>
-            </select>
-
-        </form>
-
-        <form>
-            <input type="checkbox" id="vote" name="registered" value="true">
-            <label for="vote">I was previously registered to vote</label><br>
-        </form>
-
-        <br>
-
-
-        <form>
-
-            <label for="Date of Birth">DOB</label>
-
-            <select name="Month" id="month">
-
-              <option value="January">January</option>
-              <option value="February">February</option>
-              <option value="March">March</option>
-              <option value="April">April</option>
-              <option value="May">May</option>
-              <option value="June">June</option>
-              <option value="July">July</option>
-              <option value="August">August</option>
-              <option value="September">September</option>
-              <option value="October">October</option>
-              <option value="November">November</option>
-              <option value="December">December</option>
-
-            </select>
-            
-            <form>
-                Date<input type = "text">
-                Year<input type = "text">
-            </form>
-        
-            <br>
-
-        </form>
+		
 
         <h3>Identification*</h3>
         <h4>New voters may have to show a form of identification or proof of residency the first time they vote, if a driver license or SSN was not provided when registering.</h4>
