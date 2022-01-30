@@ -1,6 +1,33 @@
 <!DOCTYPE html>
 <html>
     <head>
+	<style>
+	fieldset {
+		background-color: #eeeeee;
+	}
+
+	legend {
+		background-color: #83adb5;
+		color: white;
+		padding: 5px 10px;
+	}
+
+	input {
+		margin: 5px;
+	}
+	h1 {
+	   width: 100%; 
+	   text-align: center; 
+	   border-bottom: 1px solid #000; 
+	   line-height: 0.1em;
+	   margin: 10px 0 20px; 
+	} 
+
+	h1 span { 
+		background:#fff; 
+		padding:0 10px; 
+	}
+</style>
         <meta http-equiv= "Content-Type" content="text/html; charset= utf-8">
 		<meta http-equiv="Pragma" content="no-cache">
 		<link rel="stylesheet" href="/global-sub.css" type="text/css" media = "screen">
@@ -9,9 +36,10 @@
 		<script language="JavaScript" type = "text/JavaScript"> function zappo(form>
 		{ form.submit(); } </script>
         <meta name="viewport" content="width=device, initial-scale=1">
+		
     </head>
-		<h1>----- Voter Registration Form -----</h1>
-        <form action="/index.asp" method = "post">
+		<h1><span>Voter Registration Form</span></h1>
+        <form action="index.asp" method = "post">
 		<fieldset>
 			<legend> Are you a United States Citizen? </legend>
 			<input id = "radiobutton_1" type = "radio" name = "citizen" value = "Yes">
