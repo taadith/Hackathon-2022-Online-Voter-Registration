@@ -58,11 +58,11 @@
 		</fieldset>
 		<fieldset>
 			<legend>Application Type:</legend>
-			<input id="radiobutton_3" type="radio" name="apptype" value="New">
+			<input id="radiobutton_3" type="radio" name="apptype" value="New" required>
 			<label class="radioitem" for="radiobutton_3">New Application</label>
-			<input id="radiobutton_4" type="radio" name="apptype" value="Change">
+			<input id="radiobutton_4" type="radio" name="apptype" value="Change" required>
 			<label class="radioitem" for="radiobutton_4">Change address within county</label>
-			<input id="radiobutton_5" type="radio" name="apptype" value="Replacement">
+			<input id="radiobutton_5" type="radio" name="apptype" value="Replacement" required>
 			<label class="radioitem" for="radiobutton_5">Replacement Voter ID</label>
 		</fieldset>
 		<fieldset>
@@ -85,7 +85,7 @@
 							Vv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jy
 							EBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+a
 							j6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg==&quot;); 
-							background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;">
+							background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;" required>
 						</td>
 						<td>
 							<label class="mname" for ="mname">Middle Name (if any):</label>
@@ -97,7 +97,7 @@
 								<span>Last Name (Include suffix if any (Jr, Sr, III)):</span>
 							</label>
 							<br>
-							<input type="text" name="lname" id="lname" value>
+							<input type="text" name="lname" id="lname" value required>
 						</td>
 						<td>
 							<label class="frmrname" for="frmrname">Former Name: (if any) </label>
@@ -112,13 +112,13 @@
 							<span class="dobmon">
 								<input style="float: left; margin-right: 5px;" title="Month" 
 								type="text" name="dobmon" id="dobmon" maxlength="2" size="2" 
-								value="">
+								value="" required>
 								<input style="float: left; margin-right: 5px;" aria-label="Day" 
 								type="text" name="dobday" id="dobday" maxlength="2" size="2" 
-								value="">
+								value="" required>
 								<input style="float: left; margin-right: 5px;" aria-label="Year" 
 								type="text" name="dobyear" id="year" maxlength="4" size="4" 
-								value="">
+								value="" required>
 							</span>
 						</td>
 						<td>
@@ -454,6 +454,7 @@
 								<option value="YOUNG">YOUNG</option>
 								<option value="ZAPATA">ZAPATA</option>
 								<option value="ZAVALA">ZAVALA</option>
+								required
 							</select>
 						</td>
 						<td width="50%">
