@@ -1,26 +1,16 @@
 <!DOCTYPE html>
 <html>
-    {% extends 'base.html' %}
-
-    {% block head %}
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content= "width=device-width, initial-scale=1">
         <title>Texas Online Voting</title>
     </head>
-    
-    {% endblock %}
-
-    {% block body %}
     <body>
         <h1>Texas Online Voting</h1>
         <h3>Welcome to the Texas Online Voter Registration Website</h3>
         <hr>
-        <button type="button" onclick="window.location.href='{{ url_for( 'register') }}';">Register to Vote Now</button>
-
-        <br>
-        <br>
-        <button type="button" onclick="window.location.href='{{ url_for( 'register') }}';">Pre-Register to Vote</button>
+        
+        <button>Register to Vote Now</button>
         <br>
         <br>
         <button>Check Your Registration Status</button>
@@ -38,12 +28,11 @@
             To register online you will need:
             <ul>
 				<li>Your Texas driver license or Texas personal identification number</li>
-				<li> OR </li>
-                <li>Your Texas driver license or Texas personal identification number</li>
-                <li> OR </li>
+				<p> OR </p>
+			</ul>
+			<ul>
                 <li>The last four digits of your social security number</li>
                 <li>Your date of birth</li> 
-                <li>Your date of birth</li>
             </ul>
             Your information will be provided to the Texas Department of Motor Vehicles (DMV) to retrieve a copy of your DMV signature
             <br>
@@ -59,5 +48,4 @@
             For more information on registering to vote you may want to visit the <a href = "https://www.votetexas.gov/faq/index.html"> Secretary of State's Frequently Asked Questions. </a>
         </p>
     </body>
-    {% endblock %}
 </html>
