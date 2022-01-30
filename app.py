@@ -1,5 +1,3 @@
-from optparse import Values
-from tkinter import INSERT
 from flask import Flask, render_template, request, flash, redirect
 from flask_sqlalchemy import SQLAlchemy
 from flask_bootstrap import Bootstrap
