@@ -1,0 +1,9 @@
+<h1>View Your Registration Information!</h1>
+{% for key,value in form_data.items() %}
+<table>
+<th> {{key}}</th>
+<td> {{value}}</td>
+</table>
+{% endfor %}
+{%print(form_data)%}
+<button type="button" onclick="window.location.href='{{ url_for( 'test') }}';">Here</button>
