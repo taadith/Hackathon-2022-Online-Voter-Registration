@@ -1,5 +1,3 @@
-from optparse import Values
-from tkinter import INSERT
 from flask import Flask, render_template, request, flash, redirect
 from flask_sqlalchemy import SQLAlchemy
 from flask_bootstrap import Bootstrap
@@ -24,7 +22,7 @@ form_data = {
 ### Routes ###
 @app.route('/home')
 def index():
-    return render_template('Page_1.html')
+    return render_template('homepage.html')
 
 @app.route('/vreg')
 def register():
@@ -45,5 +43,4 @@ def data():
 #######
 
 if __name__ == "__main__":
-    db.create_all()
     app.run(debug=True)
