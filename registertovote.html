@@ -9,28 +9,22 @@
 		<script language="JavaScript" type = "text/JavaScript"> function zappo(form>
 		{ form.submit(); } </script>
         <meta name="viewport" content="width=device, initial-scale=1">
-        <title>Personal Information - Voter Registration Application</title>
     </head>
-    <body>
-        <h1>- Voter Registration Application -</h1>
-        
+		<h1>----- Voter Registration Form -----</h1>
+        <form action="/index.asp" method = "post">
 		<fieldset>
 			<legend> Are you a United States Citizen? </legend>
-			<input id = "radiobutton_1" type = "radio" name = "citizen" value = "Yes"
-			checked onclick = "if (!window.__cfRLUnblockHandlers) return false; zappo(this.form)">
+			<input id = "radiobutton_1" type = "radio" name = "citizen" value = "Yes">
 			<label class = "radioitem" for = "radiobutton_1">Yes</label>
-			<input id = "radiobutton_2" type = "radio" name= "citizen" value = "No"
-			onclick = "if (!window.__cfRLUnblockHandlers) return false; zappo(this.form)">
+			<input id = "radiobutton_2" type = "radio" name= "citizen" value = "No">
 			<label class = "radioitem" for = "radiobutton_2">No</label>
 			<br>
 		</fieldset>
 		<fieldset>
 			<legend> Will you be 18 years of age on or before election day? </legend>
-			<input id = "radiobutton_1b" type = "radio" name = "age" value = "Yes"
-			checked onclick = "if (!window.__cfRLUnblockHandlers) return false; zappo(this.form)">
+			<input id = "radiobutton_1b" type = "radio" name = "age" value = "Yes">
 			<label class = "radioitem" for = "radiobutton_1b">Yes</label>
-			<input id = "radiobutton_2b" type = "radio" name= "citizen" value = "No"
-			onclick = "if (!window.__cfRLUnblockHandlers) return false; zappo(this.form)">
+			<input id = "radiobutton_2b" type = "radio" name= "age" value = "No">
 			<label class = "radioitem" for = "radiobutton_2b">No</label>
 			<br>
 		</fieldset>
@@ -50,15 +44,512 @@
 			<input id="radiobutton_7" type = "radio" name="serving" value = "No">
 			<label class="radioitem" for= "radiobutton_7">No</label>
 		</fieldset>
-		
-		
-		
-		
-		
-
-        <h3>Identification*</h3>
-        <h4>New voters may have to show a form of identification or proof of residency the first time they vote, if a driver license or SSN was not provided when registering.</h4>
-
-
+		<fieldset>
+			<legend>Applicant Information</legend>
+			<table summary width="100%">
+				<tbody>
+					<tr>
+						<td>
+							<label class = "fname" for ="fname">First Name:</label>
+							<br>
+							<input type="text" name="fname" id="fname" value="" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoA
+							AAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaT
+							Vv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jy
+							EBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+a
+							j6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg==&quot;); 
+							background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;">
+						</td>
+						<td>
+							<label class="mname" for ="mname">Middle Name (if any):</label>
+							<br>
+							<input type="text" name="mname" id="mname" value>
+						</td>
+						<td>
+							<label class="lname" for="lname">
+								<span>Last Name (Include suffix if any (Jr, Sr, III)):</span>
+							</label>
+							<br>
+							<input type="text" name="lname" id="lname" value>
+						</td>
+						<td>
+							<label class="frmrname" for="frmrname">Former Name: (if any) </label>
+							<br>
+							<input type="text" name="frmrname" id="frmrname" value>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="dobmon">Date of Birth: (mm/dd/yyyy)</label>
+							<br>
+							<span class="dobmon">
+								<input style="float: left; margin-right: 5px;" title="Month" 
+								type="text" name="dobmon" id="dobmon" maxlength="2" size="2" 
+								value="">
+								<input style="float: left; margin-right: 5px;" aria-label="Day" 
+								type="text" name="dobday" id="dobday" maxlength="2" size="2" 
+								value="">
+								<input style="float: left; margin-right: 5px;" aria-label="Year" 
+								type="text" name="dobyear" id="year" maxlength="4" size="4" 
+								value="">
+							</span>
+						</td>
+						<td>
+							<label for="gender">Gender (optional)</label>
+							<br>
+							<span class= "gender">
+								<select id="gender" name="gender" size="1">
+									<option selected="selected">Select...</option>
+									<option value="Male">Male</option>
+									<option value="Female">Female</option>
+								</select>
+							</span>
+						</td>
+						<td colspan="2">
+							<label for="telnumac">Telephone Number, Include Area Code: (Optional)
+							</label>
+							<br>
+							<span class="telnum">
+								<input style="float: left; margin-right: 5px;" title="Area Code" type="text" 
+								name="telnumac" id="telnumac" maxlength="3" size="3" value="">
+								<input style="float: left; margin-right: 5px;" type="text" 
+								name="telnumpre" aria-label="First three digits" maxlength="3" size="3" value="">
+								<input style="float: left; margin-right: 5px;" type="text" 
+								name="telnum" aria-label="Last four digits" maxlength="4" size="4" value="">
+							</span>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="4">
+							<label for="txdl">
+								<span>Texas Driver's License No. or Texas Personal I.D. No. </span>
+								<span class="smalltext">(Issued by the Department of Public Safety):</span>
+								<a name="txdl"></a>
+								<input style="display: inline !important;" type="text"
+								maxlength="8" size = "8" name="txdl" id="txdl" value>
+							</label>
+						</td>
+					</tr>
+					<tr bgcolor = "#F5F5F5">
+						<td colspan="4">
+							<label for="ssn">
+								If no Texas Driver's License or Texas Personal 
+								Identification, give last 4 digits of your Social Security 
+								Number: 
+								<br>
+								XXX-XX- "
+								<input style="display: inline !important;" type="text" 
+								maxlength="4" size="4" name="ssn" id="ssn" value="">
+							</label>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="4">
+							<input type="checkbox" name="NoTXDL" id="checkbox_1">
+							" &nbsp;"
+							<label for="checkbox_1">
+								I have not been issued a Texas Driver's License/Personal
+								Identification Number or Social Security Number
+							</label>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</fieldset>
+		<fieldset>
+			<legend>
+				Residence Address: Street Address and Apartment Number. If none,
+				describe where you live."
+			</legend>
+			<legend> (Do not include P.O. Box, Rural Rt, or Business Address)
+			</legend>
+			<table summary>
+				<tbody>
+					<tr>
+						<td width="20%">
+							<label class="county" for="county">
+								<span>County:</span>
+							</label>
+							<br>
+							<select size="1" name="county" id="county">
+								<option value="Select..." selected="">Select...</option>
+								<option value="ANDERSON">ANDERSON</option>
+								<option value="ANDREWS">ANDREWS</option>
+								<option value="ANGELINA">ANGELINA</option>
+								<option value="ARANSAS">ARANSAS</option>
+								<option value="ARCHER">ARCHER</option>
+								<option value="ARMSTRONG">ARMSTRONG</option>
+								<option value="ATASCOSA">ATASCOSA</option>
+								<option value="AUSTIN">AUSTIN</option>
+								<option value="BAILEY">BAILEY</option>
+								<option value="BANDERA">BANDERA</option>
+								<option value="BASTROP">BASTROP</option>
+								<option value="BAYLOR">BAYLOR</option>
+								<option value="BEE">BEE</option>
+								<option value="BELL">BELL</option>
+								<option value="BEXAR">BEXAR</option>
+								<option value="BLANCO">BLANCO</option>
+								<option value="BORDEN">BORDEN</option>
+								<option value="BOSQUE">BOSQUE</option>
+								<option value="BOWIE">BOWIE</option>
+								<option value="BRAZORIA">BRAZORIA</option>
+								<option value="BRAZOS">BRAZOS</option>
+								<option value="BREWSTER">BREWSTER</option>
+								<option value="BRISCOE">BRISCOE</option>
+								<option value="BROOKS">BROOKS</option>
+								<option value="BROWN">BROWN</option>
+								<option value="BURLESON">BURLESON</option>
+								<option value="BURNET">BURNET</option>
+								<option value="CALDWELL">CALDWELL</option>
+								<option value="CALHOUN">CALHOUN</option>
+								<option value="CALLAHAN">CALLAHAN</option>
+								<option value="CAMERON">CAMERON</option>
+								<option value="CAMP">CAMP</option>
+								<option value="CARSON">CARSON</option>
+								<option value="CASS">CASS</option>
+								<option value="CASTRO">CASTRO</option>
+								<option value="CHAMBERS">CHAMBERS</option>
+								<option value="CHEROKEE">CHEROKEE</option>
+								<option value="CHILDRESS">CHILDRESS</option>
+								<option value="CLAY">CLAY</option>
+								<option value="COCHRAN">COCHRAN</option>
+								<option value="COKE">COKE</option>
+								<option value="COLEMAN">COLEMAN</option>
+								<option value="COLLIN">COLLIN</option>
+								<option value="COLLINGSWORTH">COLLINGSWORTH</option>
+								<option value="COLORADO">COLORADO</option>
+								<option value="COMAL">COMAL</option>
+								<option value="COMANCHE">COMANCHE</option>
+								<option value="CONCHO">CONCHO</option>
+								<option value="COOKE">COOKE</option>
+								<option value="CORYELL">CORYELL</option>
+								<option value="COTTLE">COTTLE</option>
+								<option value="CRANE">CRANE</option>
+								<option value="CROCKETT">CROCKETT</option>
+								<option value="CROSBY">CROSBY</option>
+								<option value="CULBERSON">CULBERSON</option>
+								<option value="DALLAM">DALLAM</option>
+								<option value="DALLAS">DALLAS</option>
+								<option value="DAWSON">DAWSON</option>
+								<option value="DEAFSMITH">DEAF SMITH</option>
+								<option value="DELTA">DELTA</option>
+								<option value="DENTON">DENTON</option>
+								<option value="DEWITT">DEWITT</option>
+								<option value="DICKENS">DICKENS</option>
+								<option value="DIMMIT">DIMMIT</option>
+								<option value="DONLEY">DONLEY</option>
+								<option value="DUVAL">DUVAL</option>
+								<option value="EASTLAND">EASTLAND</option>
+								<option value="ECTOR">ECTOR</option>
+								<option value="EDWARDS">EDWARDS</option>
+								<option value="ELPASO">EL PASO</option>
+								<option value="ELLIS">ELLIS</option>
+								<option value="ERATH">ERATH</option>
+								<option value="FALLS">FALLS</option>
+								<option value="FANNIN">FANNIN</option>
+								<option value="FAYETTE">FAYETTE</option>
+								<option value="FISHER">FISHER</option>
+								<option value="FLOYD">FLOYD</option>
+								<option value="FOARD">FOARD</option>
+								<option value="FORTBEND">FORT BEND</option>
+								<option value="FRANKLIN">FRANKLIN</option>
+								<option value="FREESTONE">FREESTONE</option>
+								<option value="FRIO">FRIO</option>
+								<option value="GAINES">GAINES</option>
+								<option value="GALVESTON">GALVESTON</option>
+								<option value="GARZA">GARZA</option>
+								<option value="GILLESPIE">GILLESPIE</option>
+								<option value="GLASSCOCK">GLASSCOCK</option>
+								<option value="GOLIAD">GOLIAD</option>
+								<option value="GONZALES">GONZALES</option>
+								<option value="GRAY">GRAY</option>
+								<option value="GRAYSON">GRAYSON</option>
+								<option value="GREGG">GREGG</option>
+								<option value="GRIMES">GRIMES</option>
+								<option value="GUADALUPE">GUADALUPE</option>
+								<option value="HALE">HALE</option>
+								<option value="HALL">HALL</option>
+								<option value="HAMILTON">HAMILTON</option>
+								<option value="HANSFORD">HANSFORD</option>
+								<option value="HARDEMAN">HARDEMAN</option>
+								<option value="HARDIN">HARDIN</option>
+								<option value="HARRIS">HARRIS</option>
+								<option value="HARRISON">HARRISON</option>
+								<option value="HARTLEY">HARTLEY</option>
+								<option value="HASKELL">HASKELL</option>
+								<option value="HAYS">HAYS</option>
+								<option value="HEMPHILL">HEMPHILL</option>
+								<option value="HENDERSON">HENDERSON</option>
+								<option value="HIDALGO">HIDALGO</option>
+								<option value="HILL">HILL</option>
+								<option value="HOCKLEY">HOCKLEY</option>
+								<option value="HOOD">HOOD</option>
+								<option value="HOPKINS">HOPKINS</option>
+								<option value="HOUSTON">HOUSTON</option>
+								<option value="HOWARD">HOWARD</option>
+								<option value="HUDSPETH">HUDSPETH</option>
+								<option value="HUNT">HUNT</option>
+								<option value="HUTCHINSON">HUTCHINSON</option>
+								<option value="IRION">IRION</option>
+								<option value="JACK">JACK</option>
+								<option value="JACKSON">JACKSON</option>
+								<option value="JASPER">JASPER</option>
+								<option value="JEFFDAVIS">JEFF DAVIS</option>
+								<option value="JEFFERSON">JEFFERSON</option>
+								<option value="JIMHOGG">JIM HOGG</option>
+								<option value="JIMWELLS">JIM WELLS</option>
+								<option value="JOHNSON">JOHNSON</option>
+								<option value="JONES">JONES</option>
+								<option value="KARNES">KARNES</option>
+								<option value="KAUFMAN">KAUFMAN</option>
+								<option value="KENDALL">KENDALL</option>
+								<option value="KENEDY">KENEDY</option>
+								<option value="KENT">KENT</option>
+								<option value="KERR">KERR</option>
+								<option value="KIMBLE">KIMBLE</option>
+								<option value="KING">KING</option>
+								<option value="KINNEY">KINNEY</option>
+								<option value="KLEBERG">KLEBERG</option>
+								<option value="KNOX">KNOX</option>
+								<option value="LAMAR">LAMAR</option>
+								<option value="LAMB">LAMB</option>
+								<option value="LAMPASAS">LAMPASAS</option>
+								<option value="LASALLE">LASALLE</option>
+								<option value="LAVACA">LAVACA</option>
+								<option value="LEE">LEE</option>
+								<option value="LEON">LEON</option>
+								<option value="LIBERTY">LIBERTY</option>
+								<option value="LIMESTONE">LIMESTONE</option>
+								<option value="LIPSCOMB">LIPSCOMB</option>
+								<option value="LIVEOAK">LIVE OAK</option>
+								<option value="LLANO">LLANO</option>
+								<option value="LOVING">LOVING</option>
+								<option value="LUBBOCK">LUBBOCK</option>
+								<option value="LYNN">LYNN</option>
+								<option value="MADISON">MADISON</option>
+								<option value="MARION">MARION</option>
+								<option value="MARTIN">MARTIN</option>
+								<option value="MASON">MASON</option>
+								<option value="MATAGORDA">MATAGORDA</option>
+								<option value="MAVERICK">MAVERICK</option>
+								<option value="MCCULLOCH">MCCULLOCH</option>
+								<option value="MCLENNAN">MCLENNAN</option>
+								<option value="MCMULLEN">MCMULLEN</option>
+								<option value="MEDINA">MEDINA</option>
+								<option value="MENARD">MENARD</option>
+								<option value="MIDLAND">MIDLAND</option>
+								<option value="MILAM">MILAM</option>
+								<option value="MILLS">MILLS</option>
+								<option value="MITCHELL">MITCHELL</option>
+								<option value="MONTAGUE">MONTAGUE</option>
+								<option value="MONTGOMERY">MONTGOMERY</option>
+								<option value="MOORE">MOORE</option>
+								<option value="MORRIS">MORRIS</option>
+								<option value="MOTLEY">MOTLEY</option>
+								<option value="NACOGDOCHES">NACOGDOCHES</option>
+								<option value="NAVARRO">NAVARRO</option>
+								<option value="NEWTON">NEWTON</option>
+								<option value="NOLAN">NOLAN</option>
+								<option value="NUECES">NUECES</option>
+								<option value="OCHILTREE">OCHILTREE</option>
+								<option value="OLDHAM">OLDHAM</option>
+								<option value="ORANGE">ORANGE</option>
+								<option value="PALOPINTO">PALOPINTO</option>
+								<option value="PANOLA">PANOLA</option>
+								<option value="PARKER">PARKER</option>
+								<option value="PARMER">PARMER</option>
+								<option value="PECOS">PECOS</option>
+								<option value="POLK">POLK</option>
+								<option value="POTTER">POTTER</option>
+								<option value="PRESIDIO">PRESIDIO</option>
+								<option value="RAINS">RAINS</option>
+								<option value="RANDALL">RANDALL</option>
+								<option value="REAGAN">REAGAN</option>
+								<option value="REAL">REAL</option>
+								<option value="REDRIVER">RED RIVER</option>
+								<option value="REEVES">REEVES</option>
+								<option value="REFUGIO">REFUGIO</option>
+								<option value="ROBERTS">ROBERTS</option>
+								<option value="ROBERTSON">ROBERTSON</option>
+								<option value="ROCKWALL">ROCKWALL</option>
+								<option value="RUNNELS">RUNNELS</option>
+								<option value="RUSK">RUSK</option>
+								<option value="SABINE">SABINE</option>
+								<option value="SANAUGUSTINE">SAN AUGUSTINE</option>
+								<option value="SANJACINTO">SAN JACINTO</option>
+								<option value="SANPATRICIO">SAN PATRICIO</option>
+								<option value="SANSABA">SAN SABA</option>
+								<option value="SCHLEICHER">SCHLEICHER</option>
+								<option value="SCURRY">SCURRY</option>
+								<option value="SHACKELFORD">SHACKELFORD</option>
+								<option value="SHELBY">SHELBY</option>
+								<option value="SHERMAN">SHERMAN</option>
+								<option value="SMITH">SMITH</option>
+								<option value="SOMERVELL">SOMERVELL</option>
+								<option value="STARR">STARR</option>
+								<option value="STEPHENS">STEPHENS</option>
+								<option value="STERLING">STERLING</option>
+								<option value="STONEWALL">STONEWALL</option>
+								<option value="SUTTON">SUTTON</option>
+								<option value="SWISHER">SWISHER</option>
+								<option value="TARRANT">TARRANT</option>
+								<option value="TAYLOR">TAYLOR</option>
+								<option value="TERRELL">TERRELL</option>
+								<option value="TERRY">TERRY</option>
+								<option value="THROCKMORTON">THROCKMORTON</option>
+								<option value="TITUS">TITUS</option>
+								<option value="TOMGREEN">TOM GREEN</option>
+								<option value="TRAVIS">TRAVIS</option>
+								<option value="TRINITY">TRINITY</option>
+								<option value="TYLER">TYLER</option>
+								<option value="UPSHUR">UPSHUR</option>
+								<option value="UPTON">UPTON</option>
+								<option value="UVALDE">UVALDE</option>
+								<option value="VALVERDE">VAL VERDE</option>
+								<option value="VANZANDT">VAN ZANDT</option>
+								<option value="VICTORIA">VICTORIA</option>
+								<option value="WALKER">WALKER</option>
+								<option value="WALLER">WALLER</option>
+								<option value="WARD">WARD</option>
+								<option value="WASHINGTON">WASHINGTON</option>
+								<option value="WEBB">WEBB</option>
+								<option value="WHARTON">WHARTON</option>
+								<option value="WHEELER">WHEELER</option>
+								<option value="WICHITA">WICHITA</option>
+								<option value="WILBARGER">WILBARGER</option>
+								<option value="WILLACY">WILLACY</option>
+								<option value="WILLIAMSON">WILLIAMSON</option>
+								<option value="WILSON">WILSON</option>
+								<option value="WINKLER">WINKLER</option>
+								<option value="WISE">WISE</option>
+								<option value="WOOD">WOOD</option>
+								<option value="YOAKUM">YOAKUM</option>
+								<option value="YOUNG">YOUNG</option>
+								<option value="ZAPATA">ZAPATA</option>
+								<option value="ZAVALA">ZAVALA</option>
+							</select>
+						</td>
+						<td width="50%">
+							<label for="resaddr">
+								<span>Address:</span>
+							</label>
+							<br>
+							<input name="resaddr" type="text" id="resaddr" size="50" 
+							value>
+						</td>
+						<td width="30%">
+							<label class="rescity" for="rescity">
+								<span>City:</span>
+							</label>
+							<br>
+							<input type="text" name="rescity" id="rescity" value>
+						</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							<label for="resstate">State:</label>
+							<input name="resstate" id="resstate" type="text" value="TX"
+							readonly="readonly" size="2" maxlength="2">
+						</td>
+						<td colspan="2">
+							<label for="rezip">
+								<span>Zip:</span>
+							</label>
+							<br>
+							<input style="float: left; margin-right: 5px;" type="text"
+							name="reszip" id="reszip" maxlength="5" size="5" value="">
+							<input style="float: left; margin-right: 5px;" type="text" 
+							name="reszip4" aria-label="4 digit zip code" id="reszip4" 
+							maxlength="4" size="4" value="">
+						</td>
+					</tr>
+					<tr>
+						<td colspan="3">
+							<label for="resaddr2">
+								<span>City and County of Former Residence in Texas:</span>
+							</label>
+							<br>
+							<input size="50" type="text" name="resaddr2" id="resaddr2"
+							value>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<br>
+		</fieldset>
+		<fieldset>
+			<legend>
+				Mailing Address: Street Address and Apartment Number. (If mail
+				cannot be delivered
+				<br>
+				to your residence address)
+			</legend>
+			<table summary>
+				<tbody>
+					<tr>
+						<td width="30%">
+							<label for="mailaddr">Address:</label>
+							<br>
+							<input size="42" type="text" name="mailaddr" id="mailaddr"
+							value>
+						</td>
+						<td width="30%">
+							<label for="mailcity">City:</label>
+							<br>
+							<input name="mailcity" id="mailcity" type="text" value>
+						</td>
+						<td width="10%">
+							<label for="mailstate">State:</label>
+							<input name= "mailstate" id="mailstate" type="text" size="2"
+							maxlength="2" value>
+						</td>
+						<td width="30%" nowrap="nowrap">
+							<label for="mailzip">Zip:</label>
+							<br>
+							<input style="float: left; margin-right: 5px;" type="text" 
+							name="mailzip" id="mailzip" maxlength="5" size="5" value="">
+							<input style="float: left; margin-right: 5px;" type="text" 
+							name="mailzip4" aria-label="4 digit zip code" id="mailzip4" 
+							maxlength="4" size="4" value="">
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</fieldset>
+		<div>
+			<span>
+				<strong>
+					I understand that giving false information to procure a voter
+					registration is perjury, and a crime under state and federal law.
+					Conviction of this crime may result in imprisonment up to one year
+					in jail, a fune up to $4,000, or both. Please read all <u>three</u>
+					statements to affirm before signing.
+				</strong>
+			</span>
+			<br>
+			<ul>
+				<li>
+					I am a resident of this county and a U.S. Citizen;
+				</li>
+				<li>
+					I have not been finally convicted of a felony, or if a felon, I 
+					have completed all of my punishment including any term of
+					incarceration, parole, supervision, period of probation, or I have
+					been pardoned; and
+				</li>
+				<li>
+					I have not been determined by a final judgement of a court 
+					exercising probate jurisdiction to be totally mentally 
+					incapacitated or partially mentally incapacitated without the 
+					right to vote.
+				</li>
+			</ul>
+			<span class="attention_bold">Please verify your data is correct before you 
+			"Submit".</span>
+			<br>
+			<br>
+			<input type="submit" name="xsubmit" value="Submit">
+			<br>
+		</div>
+		</form>
     </body>
 </html>
