@@ -6,8 +6,23 @@
         <title>Personal Information - Voter Registration Application</title>
     </head>
     <body>
-        <h1>Personal Information - Voter Registration Application</h1>
-        <h4>All fields marked with an asterisk(*) are required </h4>
+        <h1>- Voter Registration Application -</h1>
+        
+		<fieldset>
+			<legend> Are you a United States Citizen? </legend>
+			<input id = "radiobutton_1" type = "radio" name = "citizen" value = "Yes"
+			checked onclick = "if (!window.__cfRLUnblockHandlers) return false; zappo(this.form)">
+			<label class = "radioitem" for = "radiobutton_1">Yes</label>
+			<input id = radiobutton_2" type = "radio" name= "citizen" value = "No"
+			onclick = "if (!window.__cfRLUnblockHandlers) return false; zappo(this.form)">
+			<label class = "radioitem" for = "radiobutton_2">No</label>
+			<br>
+		</fieldset>
+		
+		
+		
+		
+		<h4>All fields marked with an asterisk(*) are required </h4>
         <h3>Personal Information</h3>
         <h3>Legal Name</h3>
 
